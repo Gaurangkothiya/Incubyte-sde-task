@@ -35,4 +35,9 @@ public void twoNumberString() {
 	assertEquals(14,cal.Add("5,9"));
 }
 
+@Test
+public void multipleNumberString() {
+	assertEquals(10,cal.Add("1,2,3,"));
+}
+
 }
