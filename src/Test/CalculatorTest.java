@@ -42,6 +42,17 @@ public void multipleNumberString() {
 
 @Test
 public void newLinesString() {
-	assertEquals(10,cal.Add("1\n,3,\n4,\n\n,2,\n"));
+	assertEquals(10,cal.Add("1,\n,3,\n4,\n\n,2,\n"));
 }
+
+@Test
+public void diffDelimiters() {
+    assertEquals(17,cal.Add("//;\n1;2;3;5;6"));
+}
+
+@Test
+public void diffDelimiters2() {
+    assertEquals(12,cal.Add("//'\n1'2'3'6"));
+}
+
 }
