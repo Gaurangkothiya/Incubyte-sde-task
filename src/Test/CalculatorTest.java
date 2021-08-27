@@ -32,7 +32,7 @@ public void singleValueString() {
 
 @Test
 public void twoNumberString() {
-	assertEquals(14,cal.Add("2,3,9"));
+	assertEquals(14,cal.Add("5,9"));
 }
 
 }
