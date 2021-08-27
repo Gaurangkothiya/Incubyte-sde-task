@@ -25,4 +25,9 @@ public void testEmptyString() {
 	assertEquals(0,cal.Add(""));
 }
 
+@Test
+public void simpleValueString() {
+	assertEquals(1,cal.Add("1"));
+}
+
 }

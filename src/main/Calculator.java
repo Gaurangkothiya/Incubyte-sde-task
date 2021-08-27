@@ -10,7 +10,8 @@ public class Calculator {
 			return 0;
 		}
 		else {
-			return 1;
+			int val = Integer.parseInt(s);
+			return val;
 		}
 	}
 }
