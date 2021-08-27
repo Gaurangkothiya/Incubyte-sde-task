@@ -10,17 +10,14 @@ public class Calculator {
 			return 0;
 		}
 		else {
-			String[] nums = s.split(",");
-			if(nums.length == 1) {
-				return Integer.parseInt(nums[0]);
+			String[] nums = s.split(",|\n");
+			
+			int sum = 0;
+			for(String num : nums) {
+				if(num.length() == 0) continue;
+				sum += Integer.parseInt(num);
 			}
-			else {
-				int sum = 0;
-				for(String num : nums) {
-					sum += Integer.parseInt(num);
-				}
-				return sum;
-			}
+			return sum;
 		}
 	}
 }
