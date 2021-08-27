@@ -68,6 +68,7 @@ public void checkNegativeNumber() throws Exception {
 	}
 }
 
+@Test
 public void checkNegativeNumber2() throws Exception {
 	try {
 		cal.Add("\n,-110,-15,200,-3");
@@ -75,6 +76,11 @@ public void checkNegativeNumber2() throws Exception {
 	catch (NegativeNumException ng) {
 	assertEquals("Negatives not allowed:- -110,-15,-3",ng.getMessage());
 	}
+}
+
+@Test
+public void numBiggerThan1000Ignored() throws Exception {
+	assertEquals(12,cal.Add("1001,2,3,6"));
 }
 
 
