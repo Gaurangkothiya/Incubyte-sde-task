@@ -40,4 +40,8 @@ public void multipleNumberString() {
 	assertEquals(10,cal.Add("1,2,3,4"));
 }
 
+@Test
+public void newLinesString() {
+	assertEquals(6,cal.Add("1\n,2,3,\n"));
+}
 }
