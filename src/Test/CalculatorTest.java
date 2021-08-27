@@ -83,5 +83,20 @@ public void numBiggerThan1000Ignored() throws Exception {
 	assertEquals(11,cal.Add("1001,2,3,6"));
 }
 
+@Test
+public void delimeterOfAnyLength() {
+    assertEquals(6,cal.add("//[***]\n1***2***3"));
+}
+
+
+
+
+
+
+
+
+
+
+
 
 }
