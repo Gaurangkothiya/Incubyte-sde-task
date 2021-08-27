@@ -60,7 +60,22 @@ public void diffDelimiters2() throws Exception{
 
 @Test 
 public void checkNegativeNumber() throws Exception {
-	assertThrows(NegativeNumException.class, cal.Add("//;\n-15;14;-20"));
+	try {
+		cal.Add("5,-10,15,-20,30");
+	}
+	catch (NegativeNumException ng) {
+	assertEquals("Negatives not allowed:- -10,-20",ng.getMessage());
+	}
 }
+
+public void checkNegativeNumber2() throws Exception {
+	try {
+		cal.Add("\n,-110,-15,200,-3");
+	}
+	catch (NegativeNumException ng) {
+	assertEquals("Negatives not allowed:- -110,-15,-3",ng.getMessage());
+	}
+}
+
 
 }
