@@ -42,6 +42,6 @@ public void multipleNumberString() {
 
 @Test
 public void newLinesString() {
-	assertEquals(6,cal.Add("1\n,2,3,\n"));
+	assertEquals(10,cal.Add("1\n,3,\n4,\n\n,2,\n"));
 }
 }
