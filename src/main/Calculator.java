@@ -1,4 +1,6 @@
 package main;
+import static org.junit.Assert.assertEquals;
+
 import java.util.ArrayList;
 
 public class Calculator {
@@ -47,6 +49,7 @@ public class Calculator {
         		this.negNums.add(num);
                 this.throwException = true;
         	}
+        	if(Integer.parseInt(num)>1000 ) continue;
             sum+=Integer.parseInt(num);
         }
         

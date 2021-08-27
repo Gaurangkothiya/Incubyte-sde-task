@@ -80,7 +80,7 @@ public void checkNegativeNumber2() throws Exception {
 
 @Test
 public void numBiggerThan1000Ignored() throws Exception {
-	assertEquals(12,cal.Add("1001,2,3,6"));
+	assertEquals(11,cal.Add("1001,2,3,6"));
 }
 
 
