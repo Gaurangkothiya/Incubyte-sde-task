@@ -55,4 +55,9 @@ public void diffDelimiters2() {
     assertEquals(12,cal.Add("//'\n1'2'3'6"));
 }
 
+@Test 
+public void checkNegativeNumber() {
+	assertEquals("Negative not allowed:- -29,-100",cal.Add("5,10,-29,45,-100"));
+}
+
 }
