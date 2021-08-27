@@ -26,8 +26,13 @@ public void testEmptyString() {
 }
 
 @Test
-public void simpleValueString() {
+public void singleValueString() {
 	assertEquals(1,cal.Add("1"));
+}
+
+@Test
+public void twoNumberString() {
+	assertEquals(5,cal.Add("2,3"));
 }
 
 }

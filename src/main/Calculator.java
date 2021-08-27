@@ -10,8 +10,13 @@ public class Calculator {
 			return 0;
 		}
 		else {
-			int val = Integer.parseInt(s);
-			return val;
+			String[] nums = s.split(",");
+			if(nums.length == 1) {
+				return Integer.parseInt(nums[0]);
+			}
+			else {
+				return Integer.parseInt(nums[0]) + Integer.parseInt(nums[1]) ;
+			}
 		}
 	}
 }
