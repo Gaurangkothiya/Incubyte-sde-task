@@ -1,9 +1,12 @@
 package Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThrows;
+
 import org.junit.Before;
 import org.junit.Test;
 import main.Calculator;
+import main.NegativeNumException;
 
 public class CalculatorTest {
 	
@@ -21,43 +24,43 @@ public void setUp() {
  }
 
 @Test
-public void testEmptyString() {
+public void testEmptyString() throws Exception {
 	assertEquals(0,cal.Add(""));
 }
 
 @Test
-public void singleValueString() {
+public void singleValueString() throws Exception{
 	assertEquals(1,cal.Add("1"));
 }
 
 @Test
-public void twoNumberString() {
+public void twoNumberString() throws Exception{
 	assertEquals(14,cal.Add("5,9"));
 }
 
 @Test
-public void multipleNumberString() {
+public void multipleNumberString() throws Exception {
 	assertEquals(10,cal.Add("1,2,3,4"));
 }
 
 @Test
-public void newLinesString() {
+public void newLinesString() throws Exception {
 	assertEquals(10,cal.Add("1,\n,3,\n4,\n\n,2,\n"));
 }
 
 @Test
-public void diffDelimiters() {
+public void diffDelimiters() throws Exception{
     assertEquals(17,cal.Add("//;\n1;2;3;5;6"));
 }
 
 @Test
-public void diffDelimiters2() {
+public void diffDelimiters2() throws Exception{
     assertEquals(12,cal.Add("//'\n1'2'3'6"));
 }
 
 @Test 
-public void checkNegativeNumber() {
-	assertEquals("Negative not allowed:- -29,-100",cal.Add("5,10,-29,45,-100"));
+public void checkNegativeNumber() throws Exception {
+	assertThrows(NegativeNumException.class, cal.Add("//;\n-15;14;-20"));
 }
 
 }
