@@ -37,7 +37,7 @@ public void twoNumberString() {
 
 @Test
 public void multipleNumberString() {
-	assertEquals(10,cal.Add("1,2,3,"));
+	assertEquals(10,cal.Add("1,2,3,4"));
 }
 
 }
