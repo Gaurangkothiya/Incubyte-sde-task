@@ -84,7 +84,15 @@ public void delimeterOfAnyLength() throws Exception {
     assertEquals(6,cal.Add("//[;;;]\n1;;;2;;;3"));
 }
 
+@Test
+public void delimeterOfAnyLength2() throws Exception {
+	assertEquals(6,cal.Add("//[---]\n1---2---3"));
+}
 
+@Test
+public void multipleDelimeter() throws Exception {
+	assertEquals(6,cal.Add("//[;][,]\n1;2,3"));
+}
 
 
 
