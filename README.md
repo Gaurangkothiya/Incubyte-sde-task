@@ -1,6 +1,6 @@
 # String Calculator
 
-##problem statement :- <a href="https://osherove.com/tdd-kata-1"> tdd-kata</a>
+## problem statement :-   <a href="https://osherove.com/tdd-kata-1"> tdd-kata</a>
 
 <br/>
 
