@@ -27,7 +27,7 @@ public class Calculator {
 			if(s.charAt(0)=='/' && s.charAt(1)=='/') {
 				
 				if(checkMultiDelimeter(s)) {
-					dmtr = SplitDelimeter(s);
+					dmtr = getDelimeter(s);
 					t = makeSubString(s);
 				}
 				else {
@@ -38,6 +38,7 @@ public class Calculator {
 			else {
 				dmtr = ",|\n";
 			}
+			
 			nums = t.split(dmtr);
 			ans = Sum(nums);
 			
@@ -52,7 +53,7 @@ public class Calculator {
 		return (s.charAt(2) == '['); 
 	}
 	
-	private String SplitDelimeter(String s) {
+	private String getDelimeter(String s) {
 		int l = s.indexOf('[');
 		int r = s.indexOf(']');
 		return s.substring(l+1,r);
@@ -60,7 +61,7 @@ public class Calculator {
 
 	private String makeSubString(String s) {
 		int r = s.indexOf(']');
-		return s.substring(r+3);
+		return s.substring(r+2);
 	}
 	
 	
