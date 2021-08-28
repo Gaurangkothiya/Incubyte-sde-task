@@ -94,6 +94,11 @@ public void multipleDelimeter() throws Exception {
 	assertEquals(10,cal.Add("//[;][,]\n4;3,3"));
 }
 
+@Test
+public void multipleDelimeter2() throws Exception{
+	assertEquals(10,cal.Add("//[-][,][;]\n1;2-3,4"));
+}
+
 
 
 
