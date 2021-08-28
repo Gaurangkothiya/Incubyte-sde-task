@@ -91,7 +91,7 @@ public void delimeterOfAnyLength2() throws Exception {
 
 @Test
 public void multipleDelimeter() throws Exception {
-	assertEquals(6,cal.Add("//[;][,]\n1;2,3"));
+	assertEquals(10,cal.Add("//[;][,]\n4;3,3"));
 }
 
 
