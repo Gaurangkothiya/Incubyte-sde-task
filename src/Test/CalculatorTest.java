@@ -50,13 +50,9 @@ public void newLinesString() throws Exception {
 
 @Test
 public void diffDelimiters() throws Exception{
-    assertEquals(17,cal.Add("//;\n1;2;3;5;6"));
+    assertEquals(17,cal.Add("//;\n;1;2;3;5;6"));
 }
 
-@Test
-public void diffDelimiters2() throws Exception{
-    assertEquals(12,cal.Add("//'\n1'2'3'6"));
-}
 
 @Test 
 public void checkNegativeNumber() throws Exception {
