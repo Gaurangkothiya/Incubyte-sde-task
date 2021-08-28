@@ -104,8 +104,10 @@ public void multipleDelimeterAnyLength() throws Exception{
 	assertEquals(10,cal.Add("//[---][,,][;;]\n1;;;;2---3,,4"));
 }
 
-
-
+@Test
+public void multipleDelimeterAnyLength2() throws Exception{
+	assertEquals(15,cal.Add("//[%%][##][::]\n1%%%2:%%3::4###5"));
+}
 
 
 
