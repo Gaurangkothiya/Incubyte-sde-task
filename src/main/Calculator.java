@@ -93,7 +93,7 @@ public class Calculator {
 		int sum=0;
 		
         for(String num:nums){
-        	System.out.println(num);
+        	
         	if(num.length()==0) continue;
         	if(Integer.parseInt(num)<0) {
         		this.negNums.add(num);
